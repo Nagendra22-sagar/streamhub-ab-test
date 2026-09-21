@@ -5,13 +5,13 @@ thumbnail artwork (based on viewing history) improves engagement and retention
 on a fictional Netflix-style OTT platform — inspired by Netflix's real published 
 work on artwork personalization.
 
-## Business Question
+### Business Question
 
 If StreamHub personalizes thumbnail artwork per user, will it meaningfully 
 improve engagement (clicks, watch time) — and just as importantly, will it 
 help or hurt subscriber retention?
 
-## Dashboard
+### Dashboard
 
 ![StreamHub Dashboard](streamhub_dashboard.png)
 
@@ -19,7 +19,7 @@ An interactive Power BI dashboard summarizing the core findings: KPI cards for
 CTR, watch time, and churn, a lift summary, CTR breakdowns by device and 
 subscription tier, a 30-day daily CTR trend, and a final launch recommendation.
 
-## Dataset
+### Dataset
 
 **streamhub_ab_test_data.csv** — 80,075 rows, split roughly 50/50 between 
 Control and Variant, tracked over a 30-day test window.
@@ -46,7 +46,7 @@ rows, duplicate user IDs with conflicting data, impossible values (clicks
 greater than impressions, negative watch minutes), and inconsistent text 
 formatting. All of this was identified and resolved (see Data Cleaning below).
 
-## Data Cleaning Summary
+### Data Cleaning Summary
 
 - **Shape:** Raw dataset had 80,075 rows and 11 columns.
 - **Missing values:** region (150), device (90), total_watch_minutes (120).
@@ -65,7 +65,7 @@ formatting. All of this was identified and resolved (see Data Cleaning below).
 - **Derived metric:** click_through_rate = title_clicks / browse_impressions, 
   with no division-by-zero cases found.
 
-## Methodology
+### Methodology
 
 The analysis follows a structured six-section framework:
 
@@ -85,7 +85,7 @@ The analysis follows a structured six-section framework:
    tier, daily trend analysis for novelty effects.
 8. **Final Recommendation** — executive summary for stakeholders.
 
-## Key Results
+### Key Results
 
 | Metric | Control | Variant | Lift |
 |---|---|---|---|
@@ -108,7 +108,7 @@ roughly 9x the minimum, making the test well-powered.
 **Sanity check:** Sample Ratio Mismatch test passed (χ² = 0.0000, p = 1.0000) — 
 the 50/50 randomization worked correctly.
 
-## Segment & Learning Effect Findings
+### Segment & Learning Effect Findings
 
 - **By device:** All five segments showed statistically significant lift 
   (p < 0.001). Mobile had the strongest lift (+3.46pp), followed by Web 
@@ -122,7 +122,7 @@ the 50/50 randomization worked correctly.
   shrinking gap — confirming a genuine, lasting effect rather than a fading 
   novelty reaction.
 
-## Ethics Review
+### Ethics Review
 
 Classified as **low-risk and low-to-moderate data sensitivity**. Users cannot 
 opt out and are silently assigned to a group, but core app functionality 
@@ -132,7 +132,7 @@ or political views), so it should be anonymized, stored securely, and used
 strictly for personalization. Standard team-level review is sufficient; no 
 formal ethics board escalation required.
 
-## Final Recommendation
+### Final Recommendation
 
 **Launch personalized thumbnails to 100% of users.** This is a rare 
 **"triple win"** — higher engagement, higher watch time, *and* improved 
@@ -143,7 +143,7 @@ personalized preview trailers compounds the effect further, and investigate
 alternative personalization approaches better suited to the Smart TV / 
 living-room viewing context.
 
-## Repository Contents
+### Repository Contents
 
 - `Dataset/` — raw data, checked/validated data, cleaned data, and daily 
   trend data
@@ -159,7 +159,7 @@ living-room viewing context.
   questions in stakeholder-readable format
 - `streamhub_dashboard.png` — dashboard screenshot (shown above)
 
-## Tools & Skills Used
+### Tools & Skills Used
 
 Python (Pandas, NumPy, Matplotlib, Seaborn, SciPy/statsmodels), SQL 
 (MySQL Workbench), Excel, Power BI, statistical hypothesis testing 
