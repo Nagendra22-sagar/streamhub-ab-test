@@ -1,0 +1,9 @@
+device,group,ctr
+Mobile,Control,0.1244
+Mobile,Variant,0.1589
+SmartTV,Control,0.1238
+SmartTV,Variant,0.1462
+Tablet,Control,0.1259
+Tablet,Variant,0.1570
+Web,Control,0.1240
+Web,Variant,0.1581

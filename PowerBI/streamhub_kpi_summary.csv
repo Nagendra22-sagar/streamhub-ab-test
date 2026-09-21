@@ -1,0 +1,3 @@
+group,ctr,watch_minutes,churn_rate
+Control,0.1243,565.88,0.0556
+Variant,0.1558,768.05,0.0467
